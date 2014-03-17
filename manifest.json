@@ -1,0 +1,35 @@
+{
+  "name": "Direct Fileshare Streamer",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Allows you to get the direct URL for a video of any supported fileshare site to stream with your favorite media player. Supports blocking advertisements at the same time.",
+  "homepage_url": "https://github.com/pcfreak30/direct-fileshare-streamer-chrome",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "clipboardWrite",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "js/dfs/library.js",
+        "js/jquery/jquery.min.js",
+        "src/main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+      "*/jquery.min.map"
+  ]
+}

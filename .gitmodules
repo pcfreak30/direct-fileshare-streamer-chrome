@@ -1,0 +1,3 @@
+[submodule "js/dfs"]
+	path = js/dfs
+	url = https://github.com/pcfreak30/direct-fileshare-streamer-library
